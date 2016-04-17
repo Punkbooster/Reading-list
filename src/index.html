@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="app/main/style.css"/>
+    <script src="app/main/app.js"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -21,9 +22,9 @@
     <!-- endbuild -->
   </head>
   <body ng-app="readingList">
-
-    <div ng-include="'app/components/app.html'"></div>
-    <script src="app/main/app.js"></script>
+    <div class="wrapper">
+      <div ng-include="'app/components/app.html'"></div>
+    </div>  
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

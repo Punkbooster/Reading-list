@@ -4,4 +4,11 @@
 
 .book .thumbnail .full {
   min-width: 75px;
+  height: 200px;
+}
+
+.wrapper {
+	width: 1440px;
+	max-width: 90%;
+	margin: 0 auto;
 }

@@ -1,20 +1,26 @@
 <h1>Reading List</h1>
 
-<div class="row">
+<div class="row" ng-controller="ReadingListController as readingList">
   <ul class="list-unstyled col-sm-8">
-    <li class="book row">
+    <li class="book row" ng-repeat="book in readingList.books">
       <aside class="col-sm-3">
         <a href="#" class="thumbnail"><img src="IMAGE" alt="Cover of title" class="full"></a>
         <h4>0/5</h4>
       </aside>
 
       <div class="col-sm-9">
-        <h3> <a href="#">TITLE</a> </h3>
-        <cite>Written by AUTHOR</cite>
+        <h3> <a href="#"> {{book.title}} </a> </h3>
+        <cite class="text-muted">Written by AUTHOR</cite>
+        <p>REVIEW</p>
+        <ul class="list-inline">
+          <li><span class="label label-primary"> GENRE </span></li>
+        </ul>
+        <p class="label label-primary">Genre</p>
       </div>
     </li>
   </ul>
   <aside class="col-sm-4">
-    <h4 class="btn btn-primary">Genres</h4>
+    <h4>Genres</h4>
+    <p class="btn btn-primary">Genre</p>
   </aside>
 </div>
