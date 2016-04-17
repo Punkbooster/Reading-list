@@ -7,6 +7,12 @@
 
       this.genres = genres;
     })
+    .directive('bookCover', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'app/partials/book-cover.html'
+      }
+    })
   ;
 
   var genres = ['non-fiction', 'fantasy', 'fiction'];

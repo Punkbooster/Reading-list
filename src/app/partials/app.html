@@ -4,14 +4,12 @@
   <ul class="list-unstyled col-sm-8">
     <li class="book row" ng-repeat="book in readingList.books">
       <aside class="col-sm-3">
-        <a href="http://amazon.com/gp/product/{{book.isbn}}" class="thumbnail"><img
-          ng-src="http://images.amazon.com/images/P/{{book.isbn}}.01.ZTZZZZZZ.jpg"
-          alt="Cover of {{book.title}}" class="full"></a>
+        <book-cover></book-cover>
         <h4>{{book.rating}}/5</h4>
       </aside>
 
       <div class="col-sm-9">
-        <h3> <a href="#"> {{book.title}} </a> </h3>
+        <h3> <a href="http://amazon.com/gp/product/{{book.isbn}}"> {{book.title}} </a> </h3>
         <cite class="text-muted">Written by {{book.author}}</cite>
         <p>{{book.review}}</p>
         <ul class="list-inline">
