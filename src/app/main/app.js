@@ -4,8 +4,13 @@
   var app = angular.module('readingList', [])
     .controller('ReadingListController', function() {
       this.books = books;
+
+      this.genres = genres;
     })
   ;
+
+  var genres = ['non-fiction', 'fantasy', 'fiction'];
+
   var books = [
     {
       title: 'A Game of Thrones: A Song of Ice and Fire',
