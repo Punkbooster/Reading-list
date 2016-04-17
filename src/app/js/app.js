@@ -13,6 +13,12 @@
         templateUrl: 'app/partials/book-cover.html'
       }
     })
+    .directive('bookGenres', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'app/partials/book-genres.html'
+      }
+    })
   ;
 
   var genres = ['non-fiction', 'fantasy', 'fiction'];
