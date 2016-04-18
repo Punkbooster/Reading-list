@@ -2,8 +2,10 @@
 
 <div class="row" ng-controller="ReadingListController as readingList">
 
-  <form name="reviewForm" class="form-horizontal">
+  <form name="reviewForm" class="form-horizontal"
+  ng-submit="readingList.addBook(book)">
     <hr>
+
     <section class="row well live-preview">
       <aside class="col-sm-3">
         <book-cover></book-cover>

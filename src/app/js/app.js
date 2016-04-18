@@ -6,6 +6,10 @@
       this.books = books;
 
       this.genres = genres;
+
+      this.addBook = function(book) {
+        this.books.push(book);
+      };
     })
     .directive('bookCover', function() {
       return {
