@@ -7,8 +7,11 @@
 
       this.genres = genres;
 
-      this.addBook = function(book) {
-        this.books.push(book);
+      this.book = {};
+
+      this.addBook = function() {
+        this.books.push(this.book);
+        this.book = {};
       };
     })
     .directive('bookCover', function() {

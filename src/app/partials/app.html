@@ -6,16 +6,16 @@
   ng-submit="readingList.addBook(book)">
     <hr>
 
-    <section class="row well live-preview">
+    <section class="row well live-preview" ng-init="book = readingList.book">
       <aside class="col-sm-3">
         <book-cover></book-cover>
-        <h4>{{book.rating}}/5</h4>
+        <h4>{{readingList.book.rating}}/5</h4>
       </aside>
 
       <div class="col-sm-9">
         <h3> <a href="http://amazon.com/gp/product/{{book.isbn}}"> {{book.title}} </a> </h3>
         <cite class="text-muted">Written by {{book.author}}</cite>
-        <p>{{book.review}}</p>
+        <p>{{readingList.book.review}}</p>
         <book-genres></book-genres>
       </div>
     </section>
@@ -23,14 +23,14 @@
     <fieldset class="form-group">
       <label for="title" class="col-sm-2 control-label">Title:</label>
       <span class="col-sm-9">
-        <input type="text" class="form-control" id="title" ng-model="book.title" placeholder="Book Title">
+        <input type="text" class="form-control" id="title" ng-model="readingList.book.title" placeholder="Book Title">
       </span>
     </fieldset>
 
     <fieldset class="form-group">
       <label for="isbn" class="control-label col-sm-2">ISBN:</label>
       <span class="col-sm-9">
-        <input type="text" id="isbn" class="form-control" maxLength="10" ng-model="book.isbn"
+        <input type="text" id="isbn" class="form-control" maxLength="10" ng-model="readingList.book.isbn"
         placeholder="ISBN-10">
       </span>
     </fieldset>
@@ -38,14 +38,14 @@
     <fieldset class="form-group">
       <label class="control-label col-sm-2" for="author">Author</label>
       <span class="col-sm-9">
-        <input type="text" id="author" class="form-control" ng-model="book.author"
+        <input type="text" id="author" class="form-control" ng-model="readingList.book.author"
         placeholder="Name of the Author"></span>
     </fieldset>
 
     <fieldset class="form-group">
       <label class="control-label col-sm-2" for="review">Review</label>
       <span class="col-sm-9">
-        <textarea id="review" class="form-control" cols="30" rows="3" ng-model="book.review"
+        <textarea id="review" class="form-control" cols="30" rows="3" ng-model="readingList.book.review"
         placeholder="Book Review"></textarea>
       </span>
     </fieldset>
@@ -53,7 +53,7 @@
     <fieldset class="form-group">
       <label for="rating" class="control-label col-sm-2">Rating:</label>
       <span class="col-sm-9">
-        <select class="form-control" id="rating" value="5" ng-model="book.rating">
+        <select class="form-control" id="rating" value="5" ng-model="readingList.book.rating">
           <option>5</option>
           <option>4</option>
           <option>3</option>
@@ -66,7 +66,7 @@
     <fieldset class="form-group">
       <label class="control-label col-sm-2" >Genre:</label>
       <span class="col-sm-9">
-        <select id="genre" class="form-control" ng-model="book.genres" multiple
+        <select id="genre" class="form-control" ng-model="readingList.book.genres" multiple
         ng-options="genre for genre in readingList.genres">
         </select>
       </span>
